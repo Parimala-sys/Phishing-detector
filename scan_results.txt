@@ -1,0 +1,39 @@
+PHISHING DETECTOR - SCAN RESULTS
+Scan Date & Time: 2026-06-29 20:25:24.109932
+========================================
+
+URL    : https://www.google.com/search?q=python
+Result : SAFE
+----------------------------------------
+URL    : http://paypa1.secure-login.xyz/verify
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .xyz, Fake brand: paypa1, Suspicious path: verify
+----------------------------------------
+URL    : https://amazon.com/products?id=123
+Result : SAFE
+----------------------------------------
+URL    : http://192.168.1.1/admin/login
+Result : PHISHING
+Reasons: No HTTPS, Suspicious path: login, IP address used
+----------------------------------------
+URL    : https://github.com/user/phishing-detector
+Result : SAFE
+----------------------------------------
+URL    : http://free-prize.win/claim?user=you
+Result : SUSPICIOUS
+Reasons: No HTTPS, Bad TLD: .win
+----------------------------------------
+URL    : https://youtube.com/watch?v=abc123
+Result : SAFE
+----------------------------------------
+URL    : http://micros0ft-update.tk/download
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .tk, Fake brand: micros0ft
+----------------------------------------
+URL    : https://facebook.com/profile?id=456
+Result : SAFE
+----------------------------------------
+URL    : http://bank-secure-login.xyz/update?ssn=123
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .xyz, Suspicious path: update
+----------------------------------------

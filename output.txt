@@ -1,0 +1,201 @@
+=== LESSON 1: User Input ===
+Enter your name: Parimala
+Hello, Parimala! Welcome to Phishing Detector 🛡️
+
+Enter your age: 21
+You are 21 years old
+Type of age: <class 'str'>
+Next year you'll be: 22
+
+=== LESSON 2: Input Validation ===
+Enter a URL to check: 
+URL cannot be empty. Try again.
+Enter a URL to check: google.com
+URL must start with http:// or https://
+Enter a URL to check: https://a
+URL must be at least 10 characters long.
+Enter a URL to check: https://www.google.com
+Valid URL received: https://www.google.com
+You entered: https://www.google.com
+
+=== LESSON 3: Writing Files ===
+File 'my_urls.txt' created with 10 URLs!
+
+=== LESSON 4: Reading Files ===
+Full file content:
+https://www.google.com/search?q=python
+http://paypa1.secure-login.xyz/verify
+https://amazon.com/products?id=123
+http://192.168.1.1/admin/login
+https://github.com/user/phishing-detector
+http://free-prize.win/claim?user=you
+https://youtube.com/watch?v=abc123
+http://micros0ft-update.tk/download
+https://facebook.com/profile?id=456
+http://bank-secure-login.xyz/update?ssn=123
+
+Line by line:
+  Line 1: https://www.google.com/search?q=python
+  Line 2: http://paypa1.secure-login.xyz/verify
+  Line 3: https://amazon.com/products?id=123
+  Line 4: http://192.168.1.1/admin/login
+  Line 5: https://github.com/user/phishing-detector
+  Line 6: http://free-prize.win/claim?user=you
+  Line 7: https://youtube.com/watch?v=abc123
+  Line 8: http://micros0ft-update.tk/download
+  Line 9: https://facebook.com/profile?id=456
+  Line 10: http://bank-secure-login.xyz/update?ssn=123
+
+=== LESSON 5: Processing URLs from File ===
+Scanning all URLs from file...
+
+URL    : https://www.google.com/search?q=python
+Result : SAFE
+--------------------------------------------------
+URL    : http://paypa1.secure-login.xyz/verify
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .xyz, Fake brand: paypa1, Suspicious path: verify
+--------------------------------------------------
+URL    : https://amazon.com/products?id=123
+Result : SAFE
+--------------------------------------------------
+URL    : http://192.168.1.1/admin/login
+Result : PHISHING
+Reasons: No HTTPS, Suspicious path: login, IP address used
+--------------------------------------------------
+URL    : https://github.com/user/phishing-detector
+Result : SAFE
+--------------------------------------------------
+URL    : http://free-prize.win/claim?user=you
+Result : SUSPICIOUS
+Reasons: No HTTPS, Bad TLD: .win
+--------------------------------------------------
+URL    : https://youtube.com/watch?v=abc123
+Result : SAFE
+--------------------------------------------------
+URL    : http://micros0ft-update.tk/download
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .tk, Fake brand: micros0ft
+--------------------------------------------------
+URL    : https://facebook.com/profile?id=456
+Result : SAFE
+--------------------------------------------------
+URL    : http://bank-secure-login.xyz/update?ssn=123
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .xyz, Suspicious path: update
+--------------------------------------------------
+
+=== LESSON 6: Saving Results ===
+Results saved to 'scan_results.txt'!
+
+=== LESSON 7: Interactive Menu ===
+
+--- PHISHING DETECTOR MENU ---
+1. Scan a single URL
+2. Scan all URLs from file
+3. Add a URL to file
+4. Quit
+5. View saved results
+Choose option (1-5): 1
+Enter URL to scan: https://www.google.com
+
+Result : SAFE
+
+--- PHISHING DETECTOR MENU ---
+1. Scan a single URL
+2. Scan all URLs from file
+3. Add a URL to file
+4. Quit
+5. View saved results
+Choose option (1-5): 2
+
+Scanning file...
+
+SAFE → https://www.google.com/search?q=python
+PHISHING → http://paypa1.secure-login.xyz/verify
+SAFE → https://amazon.com/products?id=123
+PHISHING → http://192.168.1.1/admin/login
+SAFE → https://github.com/user/phishing-detector
+SUSPICIOUS → http://free-prize.win/claim?user=you
+SAFE → https://youtube.com/watch?v=abc123
+PHISHING → http://micros0ft-update.tk/download
+SAFE → https://facebook.com/profile?id=456
+PHISHING → http://bank-secure-login.xyz/update?ssn=123
+
+========== SCAN SUMMARY ==========
+Total URLs Scanned : 10
+SAFE               : 5
+SUSPICIOUS         : 1
+PHISHING           : 4
+==================================
+
+--- PHISHING DETECTOR MENU ---
+1. Scan a single URL
+2. Scan all URLs from file
+3. Add a URL to file
+4. Quit
+5. View saved results
+Choose option (1-5): 3
+Enter URL to add: https://www.python.org
+Added: https://www.python.org
+
+--- PHISHING DETECTOR MENU ---
+1. Scan a single URL
+2. Scan all URLs from file
+3. Add a URL to file
+4. Quit
+5. View saved results
+Choose option (1-5): 5
+
+=== SAVED SCAN RESULTS ===
+
+PHISHING DETECTOR - SCAN RESULTS
+Scan Date & Time: 2026-06-29 20:25:24.109932
+========================================
+
+URL    : https://www.google.com/search?q=python
+Result : SAFE
+----------------------------------------
+URL    : http://paypa1.secure-login.xyz/verify
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .xyz, Fake brand: paypa1, Suspicious path: verify
+----------------------------------------
+URL    : https://amazon.com/products?id=123
+Result : SAFE
+----------------------------------------
+URL    : http://192.168.1.1/admin/login
+Result : PHISHING
+Reasons: No HTTPS, Suspicious path: login, IP address used
+----------------------------------------
+URL    : https://github.com/user/phishing-detector
+Result : SAFE
+----------------------------------------
+URL    : http://free-prize.win/claim?user=you
+Result : SUSPICIOUS
+Reasons: No HTTPS, Bad TLD: .win
+----------------------------------------
+URL    : https://youtube.com/watch?v=abc123
+Result : SAFE
+----------------------------------------
+URL    : http://micros0ft-update.tk/download
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .tk, Fake brand: micros0ft
+----------------------------------------
+URL    : https://facebook.com/profile?id=456
+Result : SAFE
+----------------------------------------
+URL    : http://bank-secure-login.xyz/update?ssn=123
+Result : PHISHING
+Reasons: No HTTPS, Bad TLD: .xyz, Suspicious path: update
+----------------------------------------
+
+
+--- PHISHING DETECTOR MENU ---
+1. Scan a single URL
+2. Scan all URLs from file
+3. Add a URL to file
+4. Quit
+5. View saved results
+Choose option (1-5): 4
+Goodbye!
+PS C:\Users\PARIMALA\Downloads\fishing detector> 
