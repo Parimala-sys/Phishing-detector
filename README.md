@@ -77,12 +77,12 @@ This project extends the phishing URL detector by introducing score-based risk a
 
 ## Sample Output
 
-```text
+text
 SAFE: 3 URL(s)
 LOW RISK: 1 URL(s)
 SUSPICIOUS: 2 URL(s)
 PHISHING: 4 URL(s)
-```
+
 
 ## Future Improvements
 
@@ -165,7 +165,7 @@ Day 6 focuses on applying advanced **Object-Oriented Programming (OOP)** concept
 
 The detector analyzes URLs and email content for phishing indicators, maintains scan history, generates reports, supports inheritance, demonstrates Python magic methods (dunder methods), and follows clean, production-style code organization.
 
----
+
 
 ## Features
 
@@ -189,7 +189,7 @@ The detector analyzes URLs and email content for phishing indicators, maintains 
 * Extract base domains from URLs
 * Customizable phishing rules and trusted domains
 
----
+
 
 ## OOP Concepts Covered
 
@@ -206,7 +206,7 @@ The detector analyzes URLs and email content for phishing indicators, maintains 
 * Context Managers (`with`)
 * Magic (Dunder) Methods
 
----
+
 
 ## Implemented Dunder Methods
 
@@ -219,7 +219,7 @@ The detector analyzes URLs and email content for phishing indicators, maintains 
 * `__enter__()`
 * `__exit__()`
 
----
+
 
 ## Day 6 Enhancements
 
@@ -232,24 +232,24 @@ The detector analyzes URLs and email content for phishing indicators, maintains 
 * Improved email phishing analysis
 * Cleaner and more modular OOP design
 
----
+
 
 ## Project Structure
 
-```text
+text
 day6_detector.py
 ├── Helper Functions
 ├── PhishingDetector Class
 ├── EmailDetector Class
 ├── Reports
 └── Demo Examples
-```
 
----
+
+
 
 ## Example Output
 
-```text
+text
 ✓ SAFE
 ⚠ SUSPICIOUS
 ✕ PHISHING
@@ -257,9 +257,9 @@ day6_detector.py
 Average Score : 35.0/100
 Total URLs    : 9
 Most Dangerous: http://paypa1.secure-login.xyz/verify
-```
 
----
+
+
 
 ## Skills Practiced
 
@@ -274,13 +274,13 @@ Most Dangerous: http://paypa1.secure-login.xyz/verify
 * Python Magic Methods
 * Real-world Cybersecurity Project Development
 
----
+
 
 ## Learning Outcome
 
 By completing Day 6, I strengthened my understanding of advanced Python OOP concepts by implementing a realistic phishing detection system. This project demonstrates object-oriented design, reusable code, inheritance, method overriding, custom dunder methods, and practical cybersecurity concepts used in phishing analysis.
 
----
+
 
 ### Future Improvements
 
