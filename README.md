@@ -91,3 +91,69 @@ PHISHING: 4 URL(s)
 - Domain age analysis
 - VirusTotal API integration
 - Machine learning-based phishing detection
+
+- # Day 5 – Object-Oriented Phishing Detector 🛡️
+
+## Overview
+
+On Day 5, I refactored my phishing URL detection project using **Object-Oriented Programming (OOP)** in Python. Instead of using standalone functions, I organized the project into reusable classes with methods, making the code more modular, maintainable, and scalable.
+
+## Topics Covered
+
+* Python Classes and Objects
+* Constructors (`__init__`)
+* Instance and Class Attributes
+* Encapsulation
+* Instance Methods
+* Magic Methods (`__str__`, `__len__`)
+* Inheritance
+* Method Reusability
+
+## Features Implemented
+
+### PhishingDetector Class
+
+* Scan individual URLs
+* Batch scan URLs from a file
+* Calculate phishing risk score
+* Classify URLs (Safe, Low Risk, Suspicious, Phishing)
+* Maintain scan history
+* Generate scan reports
+* Save reports to a text file
+* Display detector statistics
+* Return the top **N** most dangerous URLs
+* Search scan history by keyword
+* Customize detectors with new fake brands and risky TLDs
+* Support `len(detector)` using the `__len__()` magic method
+
+### EmailDetector (Inheritance)
+
+* Inherits all functionality from `PhishingDetector`
+* Detects phishing language in email subjects and bodies
+* Identifies urgency phrases
+* Detects payment scam phrases such as:
+
+  * Wire Transfer
+  * Gift Card
+  * Bitcoin
+* Scans URLs contained within email messages
+* Produces an overall phishing risk score for emails
+
+## Skills Practiced
+
+* Object-Oriented Programming (OOP)
+* Code Organization
+* Python Magic Methods
+* Inheritance
+* List Comprehensions
+* Sorting and Searching
+* File Handling
+* URL Analysis
+* Risk Scoring
+
+## Learning Outcome
+
+This project strengthened my understanding of Python OOP concepts by transforming a procedural phishing detector into a reusable and extensible security tool. I also learned how inheritance, custom methods, and object state management can be used to build scalable cybersecurity applications.
+
+**Next Goal:** Enhance the detector with domain reputation checks, WHOIS analysis, IP intelligence, and machine learning-based phishing detection.
+
