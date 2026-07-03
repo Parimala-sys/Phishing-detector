@@ -157,3 +157,140 @@ This project strengthened my understanding of Python OOP concepts by transformin
 
 **Next Goal:** Enhance the detector with domain reputation checks, WHOIS analysis, IP intelligence, and machine learning-based phishing detection.
 
+# 🛡️ Day 6 – Advanced Object-Oriented Phishing Detector
+
+## Overview
+
+Day 6 focuses on applying advanced **Object-Oriented Programming (OOP)** concepts in Python by building a feature-rich phishing detection system.
+
+The detector analyzes URLs and email content for phishing indicators, maintains scan history, generates reports, supports inheritance, demonstrates Python magic methods (dunder methods), and follows clean, production-style code organization.
+
+---
+
+## Features
+
+* Analyze URLs for phishing indicators
+* Calculate phishing risk score (0–100)
+* Classify URLs as:
+
+  *  SAFE
+  *  LOW RISK
+  *  SUSPICIOUS
+  *  PHISHING
+* Scan multiple URLs
+* Scan URLs from a text file
+* Generate detailed scan reports
+* Save reports to a text file
+* Search previous scan history
+* Display top dangerous URLs
+* Merge scan histories using the `+` operator
+* Email phishing detection
+* Automatic removal of `utm_*` tracking parameters before scanning
+* Extract base domains from URLs
+* Customizable phishing rules and trusted domains
+
+---
+
+## OOP Concepts Covered
+
+* Classes and Objects
+* Constructors (`__init__`)
+* Instance Variables
+* Class Variables
+* Private Methods
+* Properties (`@property`)
+* Class Methods (`@classmethod`)
+* Static Methods (`@staticmethod`)
+* Inheritance
+* Method Overriding
+* Context Managers (`with`)
+* Magic (Dunder) Methods
+
+---
+
+## Implemented Dunder Methods
+
+* `__len__()`
+* `__str__()`
+* `__repr__()`
+* `__contains__()`
+* `__iter__()`
+* `__add__()`
+* `__enter__()`
+* `__exit__()`
+
+---
+
+## Day 6 Enhancements
+
+* Added `safe_count` property
+* Added `from_dict()` class method
+* Added `parse_domain()` static method
+* Added `__add__()` to merge detector histories
+* Overrode `scan()` in `EmailDetector`
+* Automatic removal of `utm_*` tracking parameters
+* Improved email phishing analysis
+* Cleaner and more modular OOP design
+
+---
+
+## Project Structure
+
+```text
+day6_detector.py
+├── Helper Functions
+├── PhishingDetector Class
+├── EmailDetector Class
+├── Reports
+└── Demo Examples
+```
+
+---
+
+## Example Output
+
+```text
+✓ SAFE
+⚠ SUSPICIOUS
+✕ PHISHING
+
+Average Score : 35.0/100
+Total URLs    : 9
+Most Dangerous: http://paypa1.secure-login.xyz/verify
+```
+
+---
+
+## Skills Practiced
+
+* Advanced Python OOP
+* Clean Code Principles
+* URL Parsing
+* Email Security Analysis
+* Report Generation
+* File Handling
+* Inheritance and Polymorphism
+* Method Overriding
+* Python Magic Methods
+* Real-world Cybersecurity Project Development
+
+---
+
+## Learning Outcome
+
+By completing Day 6, I strengthened my understanding of advanced Python OOP concepts by implementing a realistic phishing detection system. This project demonstrates object-oriented design, reusable code, inheritance, method overriding, custom dunder methods, and practical cybersecurity concepts used in phishing analysis.
+
+---
+
+### Future Improvements
+
+* Domain reputation lookup
+* WHOIS integration
+* DNS analysis
+* Threat intelligence feeds
+* GUI version
+* REST API
+* Machine Learning–based phishing detection
+* Export reports as PDF and CSV
+
+
