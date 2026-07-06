@@ -293,4 +293,85 @@ By completing Day 6, I strengthened my understanding of advanced Python OOP conc
 * Machine Learning–based phishing detection
 * Export reports as PDF and CSV
 
+# Day 6 – Utils Module for Phishing Detector
+
+## Overview
+
+This module contains reusable utility functions that support the phishing detector project. It focuses on writing clean, maintainable, and well-documented Python code using modern programming practices such as type hints, docstrings, doctests, guard clauses, lambda functions, and reusable helper functions.
+
+## Features
+
+### URL Analysis
+
+* Detects IP-based domains
+* Counts subdomains
+* Extracts the base domain
+* Removes tracking parameters from URLs
+* Detects excessive hyphens in domain names
+* Identifies sensitive query parameters
+
+### Formatting Utilities
+
+* Risk score progress bars
+* Risk icons
+* Result formatting helpers
+* Reason list formatting
+* Divider and timestamp generators
+* Text truncation
+
+### Statistics
+
+* Computes scan statistics
+* Generates summary reports
+* Groups results by risk level
+* Returns the highest-risk URLs
+* Builds score histograms
+* Calculates percentages
+
+### Python Concepts Practiced
+
+* Pure vs. impure functions
+* Type hints
+* Comprehensive docstrings
+* Doctests
+* Guard clauses
+* Default parameters
+* `*args` and `**kwargs`
+* Lambda functions
+* Higher-order functions
+* Reusable utility modules
+
+## Learning Outcomes
+
+* Built reusable helper functions for larger Python projects
+* Improved code readability and maintainability
+* Practiced defensive programming techniques
+* Learned to validate functionality with doctests
+* Applied functional programming concepts to cybersecurity utilities
+
+## Sample Output
+
+```text
+compute_stats() output:
+total      : 10
+safe       : 4
+low_risk   : 1
+suspicious : 1
+phishing   : 4
+avg_score  : 39.5/100
+
+summarise():
+10 scanned | 4 safe | 1 suspicious | 4 phishing | avg 39.5/100
+```
+
+## Skills Demonstrated
+
+* Python Programming
+* Modular Code Design
+* URL Parsing
+* Data Processing
+* Functional Programming
+* Code Documentation
+* Defensive Programming
+* Cybersecurity Utility Development
 
