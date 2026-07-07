@@ -375,3 +375,113 @@ summarise():
 * Defensive Programming
 * Cybersecurity Utility Development
 
+# Day 6 – Configuration Management for Phishing URL Detector
+
+## Overview
+
+This module centralizes all configuration used by the phishing URL detector. It demonstrates Python best practices for managing constants, immutable data structures, enums, validation, environment variables, and structured configuration.
+
+## Features
+
+* Centralized configuration using constants
+* Immutable configuration with tuples and frozensets
+* Risk scoring using configurable score weights
+* Structured phishing checks using `namedtuple`
+* Risk classification with `Enum` and `IntEnum`
+* Added `Severity` enum (`LOW`, `MEDIUM`, `HIGH`) for categorizing phishing indicators
+* Mapping of every security check to a severity level using `CHECK_SEVERITY`
+* Configuration validation through `_validate_config()`
+* Environment variable overrides for runtime customization
+* Support for `PHISH_MAX_SCORE` with range validation (50–200)
+* Detection lists for:
+
+  * Suspicious TLDs
+  * Fake brand patterns (expanded with additional typosquatting examples)
+  * Suspicious URL paths
+  * Sensitive query parameters
+  * Trusted domains whitelist (expanded with additional trusted domains)
+  * Email phishing phrases
+* Public API control using `__all__`
+
+## New Improvements
+
+### New Detection Check
+
+* Added `new_domain` check
+* Weight: **20**
+* Description: **Domain registered < 30 days**
+
+### Expanded Fake Brand Patterns
+
+Added additional typosquatting patterns such as:
+
+* `spotiify`
+* `twitterr`
+* `netfilx`
+
+### Severity Classification
+
+Introduced a new `Severity` enum:
+
+* `LOW`
+* `MEDIUM`
+* `HIGH`
+
+Each phishing check is mapped to an appropriate severity level using `CHECK_SEVERITY`.
+
+### Environment Configuration
+
+The maximum phishing score can now be overridden using:
+
+```bash
+PHISH_MAX_SCORE=100
+```
+
+Validation ensures the value remains between **50** and **200** to prevent invalid configurations.
+
+### Trusted Domains
+
+Expanded the whitelist with additional trusted domains including:
+
+* `wikipedia.org`
+* `python.org`
+* `docs.python.org`
+* `npmjs.com`
+* `cloudflare.com`
+
+## Learning Outcomes
+
+This project demonstrates practical use of:
+
+* Constants and naming conventions
+* Mutable vs immutable collections
+* Tuples and frozensets
+* `namedtuple`
+* `Enum` and `IntEnum`
+* Configuration validation
+* Environment variables
+* Defensive programming
+* Python module exports (`__all__`)
+
+## Technologies
+
+* Python 3
+* Standard Library
+
+  * `os`
+  * `collections.namedtuple`
+  * `enum`
+
+## Sample Output
+
+* Configuration validation
+* Risk threshold display
+* Score weight breakdown
+* Enum demonstration
+* Immutable collection examples
+* Environment variable overrides
+* Validation error reporting for invalid configuration values
+
+## Project Goal
+
+Build a maintainable and production-ready configuration module for a phishing URL detection system while following clean code principles and Python best practices.
