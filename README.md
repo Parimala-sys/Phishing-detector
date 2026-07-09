@@ -485,3 +485,45 @@ This project demonstrates practical use of:
 ## Project Goal
 
 Build a maintainable and production-ready configuration module for a phishing URL detection system while following clean code principles and Python best practices.
+
+# Day 6 – Command Line Phishing Detector
+
+## Overview
+Enhanced the phishing detector by adding a command-line interface, email phishing detection, logging, whitelist support, and improved error handling.
+
+## Features
+- Scan a single URL or multiple URLs from a file
+- Detect phishing emails using subject and body analysis
+- Add trusted domains with `--whitelist`
+- Display Top N most dangerous URLs
+- Filter results using `--min-score`
+- Save scan reports to `report.txt`
+- Support verbose and quiet logging modes
+- Handle invalid inputs and runtime errors gracefully
+- Return exit codes for automation
+
+## Usage
+
+```bash
+# Scan a URL
+python day6_main.py --url http://paypa1.xyz
+
+# Scan URLs from a file
+python day6_main.py --file urls.txt --top 5 --verbose
+
+# Scan an email
+python day6_main.py --email-subject "PayPal Security Alert" --email-body "Click here immediately to verify your account."
+
+# Trust a domain
+python day6_main.py --url https://google.com --whitelist google.com
+```
+
+## Skills Practiced
+- Python argparse
+- Object-Oriented Programming (OOP)
+- Inheritance
+- Exception Handling
+- Logging
+- File Handling
+- Command-Line Interface (CLI)
+- Email & URL Phishing Detection
