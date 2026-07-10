@@ -555,3 +555,9 @@ python day7_cli.py scan --file urls.txt --search paypal
 python day7_cli.py interactive
 python day7_cli.py config --show-all
 python day7_cli.py config --save-config my_config.json
+## Example Configuration
+
+The detector configuration can be exported using:
+
+```bash
+python day7_cli.py config --save-config my_config.json
