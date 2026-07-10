@@ -527,3 +527,31 @@ python day6_main.py --url https://google.com --whitelist google.com
 - File Handling
 - Command-Line Interface (CLI)
 - Email & URL Phishing Detection
+
+# Day 7 – Phishing Detector CLI
+
+## Overview
+Built a command-line interface (CLI) for the phishing URL detector using Python's `argparse` module. The application supports scanning URLs, interactive mode, configuration management, reporting, and multiple output formats.
+
+## Features
+- Scan a single URL or a file containing multiple URLs.
+- Interactive REPL mode for continuous URL scanning.
+- Filter scan results using the `--search` option.
+- Display live progress while scanning large URL files.
+- Export scan results in **Table**, **JSON**, and **CSV** formats.
+- Save detector configuration using `--save-config`.
+- Support for stdin piping.
+- Configurable whitelist and blocked TLDs.
+- Colored terminal output based on risk level.
+- Command logging with configurable log levels.
+- Modular CLI using subcommands (`scan`, `interactive`, `config`, `report`, `email`).
+
+## Commands
+
+```bash
+python day7_cli.py scan --url https://example.com
+python day7_cli.py scan --file urls.txt
+python day7_cli.py scan --file urls.txt --search paypal
+python day7_cli.py interactive
+python day7_cli.py config --show-all
+python day7_cli.py config --save-config my_config.json
