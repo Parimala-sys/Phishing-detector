@@ -1,4 +1,4 @@
-# Phishing Detection System 🛡️
+# Phishing Detection System 
 
 A Python-based phishing detection system built as part of my cybersecurity learning journey.
 
@@ -92,7 +92,7 @@ PHISHING: 4 URL(s)
 - VirusTotal API integration
 - Machine learning-based phishing detection
 
-- # Day 5 – Object-Oriented Phishing Detector 🛡️
+- # Day 5 – Object-Oriented Phishing Detector 
 
 ## Overview
 
@@ -157,7 +157,7 @@ This project strengthened my understanding of Python OOP concepts by transformin
 
 **Next Goal:** Enhance the detector with domain reputation checks, WHOIS analysis, IP intelligence, and machine learning-based phishing detection.
 
-# 🛡️ Day 6 – Advanced Object-Oriented Phishing Detector
+# Day 6 – Advanced Object-Oriented Phishing Detector
 
 ## Overview
 
@@ -561,3 +561,38 @@ The detector configuration can be exported using:
 
 ```bash
 python day7_cli.py config --save-config my_config.json
+
+## Day 8 – External Libraries & Live Threat Intelligence
+
+### Features
+- HTTP requests using `requests`
+- DNS resolution with `socket`
+- TLS/SSL certificate inspection
+- HTTP security header analysis
+- Threat intelligence API integration
+- URL hashing using SHA-256
+- Regex-based phishing detection
+- Local scan caching
+- EnrichedDetector pipeline
+- Automatic `requirements.txt` generation
+
+### Technologies Used
+- Python
+- requests
+- socket
+- ssl
+- hashlib
+- json
+- re
+
+### Lessons Covered
+1. Python Package Ecosystem
+2. requests Library
+3. DNS Lookup
+4. TLS/SSL Inspection
+5. Threat Intelligence APIs
+6. HTTP Security Headers
+7. URL Hashing
+8. Regex URL Analysis
+9. EnrichedDetector Pipeline
+10. requirements.txt Management
