@@ -596,3 +596,76 @@ python day7_cli.py config --save-config my_config.json
 8. Regex URL Analysis
 9. EnrichedDetector Pipeline
 10. requirements.txt Management
+
+# Day 9 – JSON & Data Persistence
+
+## Overview
+
+Day 9 extends the phishing detector with persistent storage, allowing scan results to be saved, searched, backed up, exported, and restored across program runs.
+
+## Features
+
+* Persistent scan history using JSON
+* Automatic loading and saving of scan results
+* Atomic file writes to prevent data corruption
+* Schema versioning and automatic migration
+* Automatic database backup on load
+* Search by risk, score, keyword, and tags
+* JSON Lines (JSONL) export for large datasets
+* CSV and HTML report generation
+* HTML report with **Download CSV** button
+* Result deduplication based on base URL (ignores query parameters)
+* Cached scan results with optional force rescan
+* Auto-save on program exit using `atexit`
+
+## Files Generated
+
+* `phish_history.json` – Persistent scan database
+* `day9_report.csv` – CSV report
+* `day9_report.html` – Interactive HTML report
+* `day9_report.jsonl` – JSON Lines export
+* `scan_stream.jsonl` – Streaming scan results
+* `backups/` – Automatic database backups
+
+## Search Examples
+
+```python
+db.search(risk="PHISHING")
+db.search(min_score=50)
+db.search(keyword="login")
+db.search(tag="confirmed")
+```
+
+## Export Examples
+
+```python
+db.export_csv("day9_report.csv")
+db.export_html("day9_report.html")
+db.export_jsonl("day9_report.jsonl")
+```
+
+## Deduplication
+
+Duplicate URLs are grouped by **scheme + host + path**, ignoring query parameters. The highest-scoring result is retained.
+
+Example:
+
+```
+http://example.com/login?ref=1
+http://example.com/login?ref=2
+```
+
+Both URLs are treated as the same base URL.
+
+## Learning Outcomes
+
+* JSON serialization and deserialization
+* Persistent data storage
+* Safe file handling with atomic writes
+* Schema migration techniques
+* JSON Lines (JSONL) processing
+* Database search and filtering
+* Data deduplication
+* Report generation (CSV & HTML)
+* Automatic backups and auto-save
+
